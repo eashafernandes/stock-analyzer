@@ -1,0 +1,28 @@
+@host = localhost
+
+
+#Moving Average
+### 
+POST http://{{host}}/pyrest/emmiters/ma_rsi HTTP/1.1
+content-type: application/json
+
+{
+    "data":{
+        "ticker":"AAPL",
+        "start_date":"01-06-2023",
+        "end_date":"01-07-2023"
+    }
+}
+
+#Correlation Analysis
+### 
+POST http://{{host}}/pyrest/emmiters/correlation HTTP/1.1
+content-type: application/json
+
+{
+    "data":{
+        "ticker":["AAPL", "MSFT", "GOOGL", "AMZN"],
+        "start_date":"01-06-2023",
+        "end_date":"01-07-2023"
+    }
+}
